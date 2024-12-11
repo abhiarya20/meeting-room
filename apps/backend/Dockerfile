@@ -6,7 +6,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 RUN yarn global add turbo
 COPY . .
-RUN turbo prune api --docker
+RUN turbo prune backend --docker
 
 FROM base AS installer
 RUN apk update
@@ -15,7 +15,7 @@ WORKDIR /app
 COPY --from=builder /app/out/json/ .
 RUN yarn install
 COPY --from=builder /app/out/full/ .
-RUN yarn turbo build --filter=api...
+RUN yarn turbo build --filter=backend...
 
 FROM base AS runner
 WORKDIR /app
@@ -24,4 +24,4 @@ RUN adduser --system --uid 1001 expressjs
 USER expressjs
 COPY --from=installer /app .
 
-CMD node apps/api/dist/index.js
+CMD node apps/backend/dist/index.js

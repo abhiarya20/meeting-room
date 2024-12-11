@@ -1,0 +1,59 @@
+.industriesSection {
+	display: flex;
+	flex-direction: column;
+	background: var(--secondary-background-color-dark);
+	padding: 0 0 4rem 0;
+}
+
+.industriesSectionHeading {
+	width: 1300px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5rem;
+}
+
+.industriesSectionTitle {
+	font-weight: bold;
+	font-size: min(3rem, max(clamp(2rem, 10.5vw, 1.5rem) , max(2.2vw, 1.5rem)));
+	color: white;
+	width: 50%;
+	letter-spacing: 0.03em;
+}
+
+.industriesSectionSubtitle {
+	color: white;
+	width: 50%;
+	line-height: 1.4;
+	font-stretch: expanded;
+	letter-spacing: 0.03em;
+	font-size: min(1.5, max(1.25vw, .8rem));
+}
+
+.industriesCardSliderWrapper{
+	margin-top: 5rem;
+}
+
+
+@media screen and (max-width: 900px) {
+	.industriesSectionHeading {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+	.industriesSectionTitle {
+		width: 100%;
+		text-align: center;
+		font-size: 1.5rem;
+	}
+	.industriesSectionSubtitle {
+		width: 100%;
+		text-align: center;
+	}
+
+	.industriesCardSliderWrapper{
+		margin-top: 2rem;
+	}
+
+}

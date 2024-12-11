@@ -1,0 +1,44 @@
+.heroCardRight {
+	grid-area: 2 / 7 / span 4 / span 6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 7vw;
+}
+
+.heroSectionRightSwipper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.heroSectionRightSwipperSlide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.featureCardImg {
+	width: 100%;
+	height: auto;
+	object-fit: cover !important;
+}
+
+.customPaginationWrapper {
+	margin: 1rem 0;
+}
+
+@media screen and (max-width: 1500px) {
+	.heroCardRight {
+		padding: 0 0;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.heroCardRight {
+		grid-area: 2 / 1 / span 1 / span 2;
+	}
+}

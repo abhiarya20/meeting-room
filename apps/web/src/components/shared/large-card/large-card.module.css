@@ -1,0 +1,86 @@
+.cardWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 1100px;
+	max-width: 90%;
+	min-height: 450px;
+	background: var(--secondary-background-color-dark);
+	padding: 2rem;
+	border-radius: 1.25rem;
+	position: relative;
+}
+
+.progressBarWrapper {
+	height: 5px;
+	width: 95%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--background-color-dark);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.progressBarWrapper::before {
+	content: "";
+	position: absolute;
+	border-radius: 10px;
+	height: 100%;
+	background: var(--primary-color-dark);
+	z-index: 10;
+	animation: progress 1.5s ease-in infinite;
+	left: -30%;
+	width: 30%;
+}
+
+@keyframes progress {
+	0% {
+		left: -30%;
+		width: 30%;
+	}
+	50% {
+		width: 70%;
+	}
+	100% {
+		left: 100%;
+		width: 30%;
+	}
+}
+
+.cardContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 0;
+	width: 100%;
+	max-height: 100%;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	width: 100%;
+	min-height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.cardWrapper {
+		background: transparent;
+		max-width: 100%;
+		padding: 1rem;
+	}
+	.progressBarWrapper {
+		display: none;
+	}
+	.logoWrapper {
+		display: none;
+	}
+}

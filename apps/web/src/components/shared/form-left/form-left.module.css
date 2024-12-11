@@ -1,0 +1,40 @@
+.signInSection {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+	gap: 1rem;
+	width: 100%;
+	height: 100%;
+}
+
+.signInTitlesWrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+.signInTitle {
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.signInSubTitle {
+	color: var(--primary-color-dark);
+	opacity: .9;
+	text-transform: lowercase;
+	font-size: 1rem;
+	margin-top: -0.3rem;
+	font-weight: bold;	
+}
+
+.signInDescription {
+	font-size: 1rem;
+	color: #c4c5c5;
+	text-align: start;
+	letter-spacing: 0.03em;
+}
+
+.signInDescription a {
+	text-decoration: none;
+	color: var(--primary-color-dark);
+	cursor: pointer;
+}

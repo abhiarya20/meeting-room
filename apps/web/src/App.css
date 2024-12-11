@@ -1,0 +1,65 @@
+:root{
+	--primary-color-dark: #0077ff;
+	--primary-hover-color-dark: #015fca;
+	--background-color-dark: #121212;
+	--secondary-background-color-dark: #1d1d1d;
+	--text-color-dark: #fff;
+}
+
+html {
+	font-size: 1rem;
+}
+
+* {
+	box-sizing: border-box;
+}
+/* prettier-ignore */
+body,h1,h2,h3,h4,h5,h6,p,ol,ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+/* prettier-ignore */
+ol,ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+body {
+	background: var(--background-color-dark);
+	font-family: "Nunito", sans-serif;
+	color: #fff;
+}
+
+#root {
+	height: 100vh;
+	height: 100dvh;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 0.4vw;
+	height: 0.4vh;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #2a2a2a;
+	border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}

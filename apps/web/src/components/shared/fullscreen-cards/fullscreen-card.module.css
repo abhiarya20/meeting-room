@@ -1,0 +1,17 @@
+.fullScreenWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+.screenWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(100% - 4rem);
+	width: 100vw;
+}
+

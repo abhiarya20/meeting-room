@@ -1,0 +1,24 @@
+/* src/components/PaginationDots/pagination-dots.module.css */
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	width: 100%;
+  }
+  
+  .paginationDot {
+	width: 10px;
+	height: 10px;
+	border-radius: 1rem;
+	background-color: #b9babb;
+	cursor: pointer;
+	transition: width 0.3s, background-color 0.3s;
+  }
+  
+  .paginationDot.paginationActive {
+	width: 1.5rem; /* Highlight the active dot */
+	background-color: #343536; /* Active dot color */
+  }
+  

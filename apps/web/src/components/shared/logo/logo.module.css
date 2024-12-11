@@ -1,0 +1,26 @@
+.logoWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 100%;
+	user-select: none;
+	cursor: pointer;
+}
+
+.logoImage {
+	height: 2.5rem;
+	width: 2.5rem;
+}
+
+.logoTitle {
+	font-weight: bold;
+	font-size: clamp(1rem, 5vw, 1.5rem);
+	text-wrap: nowrap;
+}
+
+@media screen and (max-width: 300px) {
+	.logoTitle {
+		display: none;
+	}
+}

@@ -1,0 +1,29 @@
+.heroChip {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border: 3px solid #4286f467;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    color: #4285f4;
+    cursor: pointer;
+  }
+  
+  .heroChip:hover {
+    background-color: #4286f446;
+  }
+  
+  .heroChipIcon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .heroChip {
+      gap: 0.5rem;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+  

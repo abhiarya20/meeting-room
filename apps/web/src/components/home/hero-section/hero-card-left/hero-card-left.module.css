@@ -1,0 +1,38 @@
+.heroCardLeft {
+	grid-area: 2 / 2 / span 4 / span 5;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+}
+
+.heroDetailsWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 100%;
+	gap: 1.5rem;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+	.heroCardLeft {
+		grid-area: 2 / 1 / span 4 / span 5;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.heroCardLeft {
+		grid-area: 1 / 1 / span 1 / span 2;
+	}
+	.heroDetailsWrapper {
+		align-items: center;
+	}
+
+	/* This for the description don't remove as it effect on <Description /> component */
+	.heroDetailsWrapper div>p {
+		text-align: center !important;
+		font-size: clamp(0.8rem, 3.5vw, 1rem);		
+	}
+}

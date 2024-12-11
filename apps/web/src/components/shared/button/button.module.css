@@ -1,0 +1,25 @@
+.button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 2.5rem;
+	width: 100%;
+	padding: 0.625rem 1.25rem;
+	color: var(--text-color-dark);
+	background: var(--primary-color-dark);
+	font-size: 1rem;
+	border-radius: 3rem;
+	transition: background-color 0.3s ease-in-out;
+	gap: 0.5rem;
+	user-select: none;
+}
+
+.button:hover {
+	background-color: var(--primary-hover-color-dark);
+}
+
+.loaderWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}

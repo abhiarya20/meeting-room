@@ -1,0 +1,156 @@
+.card {
+  background: var(--secondary-background-color-dark);
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 200px;
+}
+
+.meetingType {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.5rem;
+}
+
+.sides {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+  font-size: .8rem;
+}
+
+.meetingStatus {
+  --bg-color: rgba(0, 252, 59, 0.452);
+  padding: 0.2rem 0.7rem;
+  border-radius: 100px;
+  background: var(--bg-color);
+}
+
+.sides > span {
+  display: inline-block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topic {
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: capitalize;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-top: 1.25rem;
+}
+
+.speakers {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 20px 0;
+}
+
+.avatars img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #20bd5f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--secondary-background-color-dark);
+}
+
+.avatars img:last-child {
+  top: 20px;
+  left: 20px;
+}
+
+.names {
+  margin-left: 100px;
+}
+
+.names span {
+  padding-bottom: 5px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.peopleCount {
+  text-align: right;
+}
+
+.peopleCount span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.singleSpeaker .avatars img {
+  position: initial;
+}
+
+.singleSpeaker .names {
+  margin-left: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+}
+
+.userName {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--dark-soft);
+  font-size: 0.875rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusText {
+  font-style: italic;
+  color: #c4c5c5;
+  font-size: 0.75rem;
+}
+
+.statusText.md {
+  font-size: 0.875rem;
+}
+
+.date {
+  font-weight: bold;
+  color: var(--dark-light);
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: 100%;
+  }
+}

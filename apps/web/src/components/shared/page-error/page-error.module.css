@@ -1,0 +1,58 @@
+.errorDetails {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	width: 100%;
+	gap: 1rem;
+}
+
+.errorIcon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #db4437;
+	font-weight: bold;
+	font-size: 4rem;
+}
+
+.errorMessage {
+	font-weight: bold;
+	text-align: center;
+	font-size: clamp(1rem, 4.5vw, 1.5rem);
+}
+
+.descriptionContainer {
+	display: flex;
+	justify-content: center;
+	width: 70%;
+}
+
+.errorDescription {
+	color: #c4c5c5;
+	text-align: center;
+	font-size: clamp(0.8rem, 2.5vw, 1.25rem);
+}
+
+.buttonWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+	.errorDetails {
+		flex-grow: 0;
+	}
+
+	.buttonWrapper {
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.descriptionContainer {
+		width: 100%;
+	}
+}

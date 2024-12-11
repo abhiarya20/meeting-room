@@ -1,0 +1,40 @@
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	height: 100%;
+	width: 100%;
+	padding: 0 2rem 2rem 2rem;
+}
+
+.signInSectionWrapper {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-grow: 1;
+	width: 100%;
+	gap: 2rem;
+}
+
+.signInSectionWrapper > *:nth-child(2) {
+	align-self: flex-end;
+}
+
+
+@media screen and (max-width: 850px) {
+	.signInSectionWrapper {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.contentWrapper {
+		padding: 0 0.5rem 0.5rem 0.5rem;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.contentWrapper {
+		padding: 0 0 0 0;
+	}
+}

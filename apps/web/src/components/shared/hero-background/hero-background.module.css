@@ -1,0 +1,73 @@
+.heroBackgroundContainer {
+	pointer-events: none;
+	position: absolute;
+	right: 1rem;
+	top: 15vh;
+	z-index: -10;
+	height: 100vh;
+	width: 100%;
+  }
+  
+  .heroBackgroundColor {
+	position: absolute;
+	height: 50rem;
+	width: 50rem;
+	border-radius: 50%;
+	opacity: 0.6;
+	mix-blend-mode: multiply;
+	filter: blur(5rem);
+  }
+  
+  .primaryHeroBackgroundColor {
+	background-color: rgba(167, 139, 250, 0.6);
+	animation: background-color-animation 12s infinite;
+	right: 5rem;
+	top: 0;
+  }
+  
+  .secondaryHeroBackgroundColor {
+	background-color: rgba(253, 224, 71, 0.5);
+	animation: background-color-animation 15s infinite linear;
+	top: -20rem;
+	right: 0;
+  }
+  
+  .tertiaryHeroBackgroundColor {
+	background-color: rgba(251, 113, 133, 0.5);
+	animation: background-color-animation 20s infinite linear;
+	bottom: 0;
+	right: 0;
+  }
+  
+  @keyframes background-color-animation {
+	0% {
+	  transform: translate(0px, 0px) scale(1);
+	}
+	25% {
+	  transform: translate(40px, -30px) scale(1.05);
+	}
+	50% {
+	  transform: translate(-30px, 40px) scale(0.95);
+	}
+	75% {
+	  transform: translate(20px, -20px) scale(1.02);
+	}
+	100% {
+	  transform: translate(0px, 0px) scale(1);
+	}
+  }
+  
+  @media screen and (max-width: 1300px) {
+	.heroBackgroundColor {
+	  height: 30rem;
+	  width: 30rem;
+	}
+  }
+  
+  @media screen and (max-width: 800px) {
+	.heroBackgroundColor {
+	  height: 20rem;
+	  width: 20rem;
+	}
+  }
+  

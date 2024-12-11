@@ -1,0 +1,160 @@
+.navbarWrapper {
+	width: 100%;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 1300px;
+	max-width: 95%;
+	height: 4rem;
+	padding: 1.25px 0;
+	margin: auto;
+}
+
+.loginBtn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 .5rem;
+	
+}
+.buttonExtention{
+	transition: all 0.5s ease;
+}
+.buttonIcon {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.userBtn {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.userWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.userName {
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+.userAvatar {
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid var(--primary-color-dark);
+	margin: 0 0.5rem;
+	margin-right: 10px;
+	cursor: pointer;
+	height: 2.5rem;
+	width: 2.5rem;
+}
+
+.options {
+	position: absolute;
+	right: -10%;
+	top: 100%;
+	width: 20rem;
+	margin-top: 0.7rem;
+	z-index: 999;
+}
+
+.options > * {
+	color: var(--primary-color-dark);
+	background: white;
+	font-weight: bolder;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	background-color: white;
+	width: 100%;
+	padding: 1rem;
+	font-size: 1rem;
+	transition: 0.5s all;
+	animation: optionAnimation 0.3s ease-out 0s 1 forwards;
+	opacity: 0;
+}
+
+.options > *:hover {
+	color: white;
+	background: var(--primary-color-dark);
+}
+
+.options > *:nth-child(1) {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.options > *:nth-last-child(1) {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.options > *:nth-child(2) {
+	animation-delay: 0.1s;
+}
+
+.options > *:nth-child(3) {
+	animation-delay: 0.2s;
+}
+
+.options > *:nth-child(4) {
+	animation-delay: 0.3s;
+}
+
+.options > *:nth-child(5) {
+	animation-delay: 0.4s;
+}
+
+@keyframes optionAnimation {
+	from {
+		opacity: 0;
+		transform: translateY(10rem) scale(0.6);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.loggingOut {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.logoutButton {
+	color: red;
+}
+
+.logoutButton:hover {
+	color: white;
+	background-color: red;
+}
+
+@media screen and (max-width: 600px) {
+	.buttonExtention {
+		display: inline-flex;
+		padding: 0 0.5rem;
+		font-size: .9rem;
+		height: 1.75rem;
+	}
+	.userName {
+		display: none;
+	}
+
+	.options {
+		width: 15rem;
+	}
+}

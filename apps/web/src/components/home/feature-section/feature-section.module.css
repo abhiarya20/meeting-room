@@ -1,0 +1,185 @@
+.featuresWrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	background: var(--background-color-dark);
+}
+
+.hybridTabWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 3rem;
+}
+
+.tabsWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	height: 4rem;
+	border: 2px solid #757575;
+	border-radius: 5rem;
+	padding: 0.7rem 0.45rem;
+	cursor: pointer;
+}
+
+.optionSwiper {
+	display: none;
+	height: 3.5rem;
+	width: 100%;
+}
+
+.customButtonPrev,
+.customButtonNext {
+	color: var(--primary-color-dark);
+	cursor: pointer;
+	position: absolute;
+	top: 25%;
+	z-index: 10;
+	font-size: 1.5rem;
+}
+
+.customButtonPrev {
+	left: 0.7rem;
+}
+
+.customButtonNext {
+	right: 0.7rem;
+}
+
+.oneTab {
+	font-size: clamp(1rem, 2.5vw, 1.5rem);
+	font-weight: bold;
+	text-align: center;
+	padding: 0.6rem 1.5rem;
+	position: relative;
+	z-index: 10;
+	color: white;
+}
+
+.oneTab.activeOneTab::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(0%, -50%);
+	height: 100%;
+	background-color: var(--primary-color-dark);
+	border-radius: 3rem;
+	z-index: -10;
+	width: 100%;
+}
+
+.subTabsWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 1rem 0;
+	max-width: 1000px;
+	padding: 0.5rem;
+}
+
+.subTabsWrapper::-webkit-scrollbar {
+	display: none;
+}
+
+.featureSwiperSlider {
+	flex: 1;
+	min-width: min-content;
+	width: auto;
+	margin: 0 0.5rem;
+}
+
+.oneSubTabs {
+	padding: 0.5rem 0.6rem;
+	cursor: pointer;
+	color: white;
+	font-size: 1.25rem;
+	line-break: strict;
+	text-align: center;
+}
+
+.oneSubTabs::after {
+	content: "";
+	width: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 0.3rem;
+	border-radius: 0.25rem;
+	background-color: var(--primary-color-dark);
+	transition: all 0.5s ease;
+}
+
+.oneSubTabs.oneSubTabsActive {
+	position: relative;
+}
+
+.oneSubTabs.oneSubTabsActive::after {
+	width: 100%;
+}
+
+.verticalFeatureCard {
+	display: grid;
+	width: 1300px;
+	max-width: 90%;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	gap: 0 2rem;
+	margin-top: 3rem;
+}
+.verticalFeatureCard > * {
+	border-radius: 2rem;
+}
+
+.verticalFeatureCard:nth-child(1) {
+	grid-area: 1 / 1 / 1 span / 1 span;
+}
+.verticalFeatureCard:nth-child(2) {
+	grid-area: 1 / 1 / 1 span / 1 span;
+}
+
+@media screen and (max-width: 768px) {
+	.verticalFeatureCard {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 2rem 0;
+	}
+	.verticalFeatureCard:nth-child(1) {
+		grid-area: 1 / 1 / 1 span / 1 span;
+	}
+	.verticalFeatureCard:nth-child(2) {
+		grid-area: 1 / 1 / 1 span / 1 span;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.tabsWrapper {
+		height: 3.5rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.tabsWrapper {
+		display: none;
+	}
+
+	.oneTab {
+		color: var(--primary-color-dark);
+		width: 100%;
+		border-bottom: 2px solid var(--primary-color-dark);
+		font-size: 1.25rem;
+	}
+
+	.oneTab.activeOneTab::before {
+		background-color: transparent;
+	}
+
+	.optionSwiper {
+		display: block;
+	}
+}

@@ -1,0 +1,17 @@
+.logoContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.logo {
+	height: 3.5rem;
+	width: 3.5rem;
+}
+
+@media screen and (max-width: 850px) {
+	.logoWrapper {
+		display: none;
+	}
+}

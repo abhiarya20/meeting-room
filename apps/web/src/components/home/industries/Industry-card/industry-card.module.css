@@ -1,0 +1,114 @@
+.industriesCardsWrapper {
+	padding: 0 1rem;
+	color: black;
+	width: 100%;
+	height: 100%;
+}
+
+.industriesCard {
+	border-radius: 1.5rem;
+	padding: 2rem;
+	width: 100%;
+	box-shadow: 0 4px 10px rgba(235, 0, 0, 0.1);
+}
+
+.industriesCardHeader {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.industriesCardIcon {
+	/* height: 5rem;
+	width: 5rem; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.industriesCardIcon:nth-child(1) {
+	display: none;
+}
+
+.industriesCardIcon:nth-last-child(1) {
+	display: inline;
+}
+
+.industriesCardIcon > * {
+	font-size: 4rem;
+	align-self: flex-end;
+}
+
+.industriesCardTitle {
+	color: black;
+	font-size: 1.4rem;
+	font-weight: bolder;
+}
+
+.industriesCardContent {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 1rem;
+	color: black;
+	margin-top: 1rem;
+}
+
+.industriesCardTextWrapper {
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.industriesCardText {
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+	max-width: 200px;
+}
+
+.industriesCardBtnWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.industriesCardButtonIcon {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+	.industriesCard {
+		padding: 1rem;
+	}
+	.industriesCardHeader {
+		gap: 1rem;
+	}
+
+	.industriesCardBtnWrapper > * {
+		padding: 0.5rem 0.75rem;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.industriesCardIcon {
+		height: 2rem;
+		width: 2rem;
+	}
+    .industriesCardTextWrapper{
+        width: 100%;
+    }
+	.industriesCardText {
+		max-width: 100%;
+	}
+	.industriesCardIcon > * {
+		font-size: 2rem;
+	}
+
+	.industriesCardIcon:nth-child(1) {
+		display: inline;
+	}
+	.industriesCardIcon:nth-last-child(1) {
+		display: none;
+	}
+}

@@ -1,0 +1,37 @@
+.formContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2rem;
+	height: 100%;
+	width: 100%;
+}
+
+.inputErrorWrapper{
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	gap: .5rem;
+	width: 100%;
+}
+
+.buttonWrapper {
+	display: flex;
+	width: 100%;
+	gap: 1rem;
+}
+
+.authIcon {
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+	.formContainer {
+		padding: 0;
+	}
+	.buttonWrapper {
+		flex-wrap: wrap;
+	}
+}

@@ -1,0 +1,17 @@
+.socialAuthWrapper {
+	display: flex;
+	gap: 1rem;
+}
+
+.googleButton {
+	background-color: white;
+}
+
+.googleButton:hover {
+	background-color: rgb(221, 221, 221);
+}
+
+.authIcon {
+	font-weight: bold;
+	font-size: 1.5rem;
+}

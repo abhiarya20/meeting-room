@@ -1,0 +1,25 @@
+.avatarWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: max-content;
+	border-radius: 50%;
+}
+
+.avatarImage {
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid var(--primary-color-dark);
+	cursor: pointer;
+	height: 3rem;
+	width: 3rem;
+	transition: width .5s ease, height .5s ease;
+}
+
+
+@media screen and (max-width: 600px) {
+	.avatarImage {
+		height: 2.5rem;
+        width: 2.5rem;
+	}
+}
